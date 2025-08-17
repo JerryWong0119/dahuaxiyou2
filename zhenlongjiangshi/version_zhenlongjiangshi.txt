@@ -1,0 +1,4 @@
+local version = {}
+local binaryVersion = {}
+DataServers = { {"1.95.136.32", 7901},}
+return version, binaryVersion
