@@ -1,6 +1,6 @@
 # HotUpdate
 ```text
-《大话西游2》测试网站，由于iOS版Apps做热更新时提供https访问URL
+《大话西游2》测试网站，用于iOS版Apps做热更新时提供https访问URL
 ```
 # 热更新步骤
 ## 确认需要更新的文件及版本号
