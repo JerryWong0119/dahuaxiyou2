@@ -1,18 +1,24 @@
 #!/bin/bash
+if [ $1 == "1.0.0" ]; then
+    echo "Don't Use 1.0.0"
+    echo "Usage: ./build_hotupdate.sh 1.0.1 ./zhenlongjiangshi"
+    exit
+fi
 if [ $# -lt 2 ]; then
     echo "No Parameters !!!!"
-    echo "Usage: ./build_hotupdate.sh 1.0.0 ./zhenlongjiangshi"
+    echo "Usage: ./build_hotupdate.sh 1.0.1 ./zhenlongjiangshi"
 else
     echo "-"
     echo "- build hotupdate"
-    echo "- $1 ---->>>> $2"
+    echo "- $2 ---->>>> $1"
     echo "-"
     echo "- Lua Scripts"
     echo "Press any key to continue ..."
     read -n 1
     echo "$2 $1 - `date "+%Y-%m-%d %H%M:%S"`" >> ./history
     rm -rf "$2/files_$1.txt"
-    rm -rf "$1/hotupdatefiles/$1"
+    rm -rf "$2/hotupdatefiles/$1"
+    \cp -rf "$2/hotupdatefiles/1.0.0" "$2/hotupdatefiles/$1"
     FileCount=0
     TotalSize=0
     LUAFILES=`find ./hotupdate/scripts -name "*.*" -type f`
@@ -31,7 +37,7 @@ else
         ((FileCount+=1))
         printf -v RESULT "%s %s %s 1" "$FILEURL" "$MD5STRING" "$FILESIZE"
         echo $RESULT >> "$2/files_$1.txt"
-        \cp -rf $file $2"/hotupdatefiles/scripts"
+        \cp -rf $file $2"/hotupdatefiles/$1/scripts/"
     done
 
     echo "-"
@@ -61,10 +67,10 @@ else
         if [[ "$MDIR" == "" ]]; then
             \cp -rf $file "$2/hotupdatefiles/res/$MDIR"
         else
-            cd "$2/hotupdatefiles/res/"
+            cd "$2/hotupdatefiles/$1/res/"
             mkdir -p "$MDIR"
-            cd "../../../"
-            \cp -rf $file "$2/hotupdatefiles/res/$MDIR/"
+            cd "../../../../"
+            \cp -rf $file "$2/hotupdatefiles/$1/res/$MDIR/"
         fi
         
     done
