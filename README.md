@@ -1,37 +1,26 @@
-# dahuaxiyou2
+# HotUpdate
 ```text
 《大话西游2》测试网站，由于iOS版Apps做热更新时提供https访问URL
 ```
-# 前言
-```text
-这部分内容是《大话西游2》系列游戏客户端做热更新的前期知识和基本概念，有助于运维人员对热更新步骤和操作
-```
-```text
-
-```
 # 热更新步骤
-## 确认需要更新的文件
+## 确认需要更新的文件及版本号
 ```text
-资源热更新有问题，貌似文件下载后没有写到对应目录下
+1、打开你的测试手机上的Apps, 在登录界面的左下角你可以看到当前Apps的版本号，例如：1.0.8
+2、确定本次热更新所需要的文件，包括：lua、png等等
 ```
 ## 制作更新包
 ```text
-Lua脚本热更新:
-1、清空“热更新文件”和“xiyou/files/scripts” 2个文件加下的所有文件
-2、将需要热更新的文件放到“热更新文件”这个文件夹
-3、打开“HotUpdate.exe”程序
-4、修改版本号, 例如: 当前客户端版本号为 1.0.0，那么就填写一个 1.0.8 这样一个大于 1.0.0 的版本号即可
-5、修改IP地址: 这个IP地址是游戏客户端启动时连接登录服的IP地址，
-6、修改端口: 这个端口后是登录服务器端口，请向技术人员确认后再做修改，默认为 7900
-7、点击“读取”按钮，此时程序会将热更新信息显示在下面的显示框中,并且会将“热更新文件”这个文件夹中的文件复制到“xiyou/files/scripts”文件夹下
-8、点击“添加”按钮，此时程序会修改ver_test.txt中的信息，生成file_1.0.8.txt文件
-9、将“xiyou”文件夹整个覆盖热更新站点上的目录，至此客户端在下次启动游戏时就能进行热更新了 ...
-注意:
-1、切记不要轻易修改“客户端路径”输入框中的“scripts”
-2、ver_test.txt文件是本程序默认生成的热更新版本控制文件，向前端开发人员确认后，根据需要修改成对应的文件名，例如: version_alibaba.txt
-3、file_x.x.x.txt文件是本程序自动生成的，无须做任何修改
-```
-```text
-png/jpg等资源热更新:
+1、将上一步骤所确认复制到hotupdate目录下的相应目录下: Lua文件复制到scripts目录，PNG/JPG等图形资源文件复制到res目录下
+2、确定版本号，例如：1.0.9，这个版本号比当前Apps版本号(1.0.8)大就行
+3、执行脚本: ./build_hotupdate.sh 1.0.9 ./zhenlongjiangshi
+4、修改 ./zhenlongjiangshi/version_zhenlongjiangshi.txt 文件中的配置项:
+["1.0.9"] = {
+    type = 0,
+    url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+    size = 0,
+    infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.9.txt",
+    fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.9/"
+}
+5、在内网测试服上测试本次热更新，如果成功了那就发布到外网上吧。（注意：发布前请修改ip地址）
 ```
 
