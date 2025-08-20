@@ -27,7 +27,7 @@ local version = {
         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
         size = 150,
         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.0.txt",
-        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files/"
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/"
     }
 }
 local binaryVersion = {
