@@ -12,6 +12,7 @@ else
     read -n 1
     echo "$2 $1 - `date "+%Y-%m-%d %H%M:%S"`" >> ./history
     rm -rf "$2/files_$1.txt"
+    rm -rf "$1/hotupdatefiles/$1"
     FileCount=0
     TotalSize=0
     LUAFILES=`find ./hotupdate/scripts -name "*.*" -type f`
