@@ -10,7 +10,7 @@
 ```
 ## 制作更新包
 ```text
-1、将上一步骤所确认复制到hotupdate目录下的相应目录下: Lua文件复制到scripts目录，PNG/JPG等图形资源文件复制到res目录下
+1、将上一步骤所确认文件复制到hotupdate目录下的相应目录下: Lua文件复制到scripts目录，PNG/JPG等图形资源文件复制到res目录下(注意:带目录的资源直接将目录复制过来)
 2、确定版本号，例如：1.0.9，这个版本号比当前Apps版本号(1.0.8)大就行
 3、执行脚本: ./build_hotupdate.sh 1.0.9 ./zhenlongjiangshi
 4、修改 ./zhenlongjiangshi/version_zhenlongjiangshi.txt 文件中的配置项:
@@ -22,5 +22,9 @@
     fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.9/"
 }
 5、在内网测试服上测试本次热更新，如果成功了那就发布到外网上吧。（注意：发布前请修改ip地址）
+```
+## 个人建议
+```text
+可以在内网测试服上建一个SVN来管理热更新资源，将zhenlongjiangshi这个目录内容整个提交到SVN上，这样可以保障每次热更新信息的完整性，也可以方便的进行回滚操作
 ```
 
