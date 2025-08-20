@@ -22,11 +22,32 @@
 -- return version, binaryVersion
 -- Local
 local version = {
-    ["1.0.0"] = {
+    ["1.0.1"] = {
         type = 0,
         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
         size = 0,
-        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.0.txt",
+        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.1.txt",
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files/"
+    },
+    ["1.0.2"] = {
+        type = 0,
+        url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+        size = 0,
+        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.2.txt",
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files/"
+    },
+    ["1.0.3"] = {
+        type = 0,
+        url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+        size = 0,
+        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.3.txt",
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files/"
+    },
+    ["1.0.4"] = {
+        type = 0,
+        url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+        size = 0,
+        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.4.txt",
         fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files/"
     }
 }
