@@ -45,36 +45,33 @@ else
         fi
         # echo $file
         FILEURL="res/"${file:16}
+        echo $FILEURL
         echo $FILEURL >> ./history
         MD5STRING=`md5 $file | awk '{print $4}'`
         FILESIZE=`wc -c < $file`
         ((TotalSize+=$FILESIZE))
         ((FileCount+=1))
-        printf -v RESULT "%s %s %s 1" "$FILEURL" "$MD5STRING" "$FILESIZE"
+        printf -v RESULT "%s %s %s 0" "$FILEURL" "$MD5STRING" "$FILESIZE"
         echo $RESULT >> "$2/files_$1.txt"
-        # echo $file
-        # FILEURL="${file:16}"
-        # echo $FILEURL
         DIRNMAE="${file%/*}"
-        echo "dir: $DIRNMAE"
-        MDIR="${DIRNMAE:16}"
-        echo $MDIR
-        if [[ "$MDIR" == "" ]]; then
-            echo "don't mkdir"
-        else
-            echo "mkdir $MDIR"
-        fi
         # echo "dir: $DIRNMAE"
-        # mkdir -p "$2/hotupdatefiles/res/$DIRNMAE"
-        # \cp -rf $file "$2/hotupdatefiles/res/$DIRNMAE/"
+        MDIR="${DIRNMAE:16}"
+        # echo $MDIR
+        if [[ "$MDIR" == "" ]]; then
+            \cp -rf $file "$2/hotupdatefiles/res/$MDIR"
+        else
+            cd "$2/hotupdatefiles/res/"
+            mkdir -p "$MDIR"
+            cd "../../../"
+            \cp -rf $file "$2/hotupdatefiles/res/$MDIR/"
+        fi
+        
     done
     echo "- Over"
-    # echo "Press any key to continue ..."
-    # read -n 1
-    echo "" >> ./history
     echo "---------------------------------------" >> ./history
     echo "Total $FileCount File" >> ./history
     echo "Total File Size: $TotalSize byte" >> ./history
     echo "---------------------------------------" >> ./history
+    echo "" >> ./history
 fi
 
