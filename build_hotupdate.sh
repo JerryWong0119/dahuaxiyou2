@@ -45,15 +45,26 @@ else
         fi
         # echo $file
         FILEURL="res/"${file:16}
-        echo $FILEURL
+        echo $FILEURL >> ./history
         MD5STRING=`md5 $file | awk '{print $4}'`
         FILESIZE=`wc -c < $file`
         ((TotalSize+=$FILESIZE))
+        ((FileCount+=1))
         printf -v RESULT "%s %s %s 1" "$FILEURL" "$MD5STRING" "$FILESIZE"
         echo $RESULT >> "$2/files_$1.txt"
-        FILEURL="${file:16}"
-        DIRNMAE="${FILEURL%/*}"
-        echo $DIRNMAE
+        # echo $file
+        # FILEURL="${file:16}"
+        # echo $FILEURL
+        DIRNMAE="${file%/*}"
+        echo "dir: $DIRNMAE"
+        MDIR="${DIRNMAE:16}"
+        echo $MDIR
+        if [[ "$MDIR" == "" ]]; then
+            echo "don't mkdir"
+        else
+            echo "mkdir $MDIR"
+        fi
+        # echo "dir: $DIRNMAE"
         # mkdir -p "$2/hotupdatefiles/res/$DIRNMAE"
         # \cp -rf $file "$2/hotupdatefiles/res/$DIRNMAE/"
     done
