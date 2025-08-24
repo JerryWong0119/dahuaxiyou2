@@ -21,13 +21,13 @@ else
     \cp -rf "$2/hotupdatefiles/1.0.0" "$2/hotupdatefiles/$1"
     FileCount=0
     TotalSize=0
-    LUAFILES=`find ./hotupdate/scripts -name "*.*" -type f`
+    LUAFILES=`find ./hotupdate/scripts -name "*" -type f`
     for file in $LUAFILES
     do
         if [[ "$file" == *"README.md" ]]; then
             continue
         fi
-        # echo $file
+        echo $file
         FILEURL="scripts/"${file:20}
         echo $FILEURL
         echo $FILEURL >> ./history
