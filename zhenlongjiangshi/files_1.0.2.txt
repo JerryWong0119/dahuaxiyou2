@@ -1,4 +1,1 @@
-scripts/game 5c4f1e89b59c4439fd7e7f6af3b6381e 3726 1
-scripts/app.views.base.CcsUIConfig 6ae9046e227ff10b95d0063aa8ae7fa5 10382 1
-scripts/framework.luaj b4049da8e58eb95fd5bcc95953602e7f 982 1
-scripts/platform.androidBridgeExtend 965d586c24e4ed6403c1b31de1b35c73 1438 1
+scripts/game 9c420c5a4be497cfc9e6056788426364 3838 1

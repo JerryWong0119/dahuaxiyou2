@@ -1,72 +1,72 @@
 -- Remote
--- local version = {
---     ["1.0.0"] = {
---         type = 0,
---         url = "http://1.95.136.32/zhenlongjiangshi/",
---         size = 0,
---         infoFiles = "http://1.95.136.32/zhenlongjiangshi/files_1.0.0.txt",
---         fileUrlPre = "http://1.95.136.32/zhenlongjiangshi/hotupdatefiles/1.0.0/"
---     }
--- }
--- local binaryVersion = {
---     ["10001"] = {
---         version = "1.0.0",
---         url = "http://1.95.136.32/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.apk"
---     },
---     ["10002"] = {
---         version = "1.0.0",
---         url = "http://1.95.136.32/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.ipa"
---     }
--- }
--- DataServers = {{"1.95.136.32", 7901}}
--- return version, binaryVersion
--- Local
 local version = {
     ["1.0.0"] = {
         type = 0,
-        url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+        url = "http://1.95.136.32/zhenlongjiangshi/",
         size = 0,
-        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.0.txt",
-        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.0/"
-    },
-    -- ["1.0.1"] = {
-    --     type = 0,
-    --     url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
-    --     size = 0,
-    --     infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.1.txt",
-    --     fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.1/"
-    -- },
-    -- ["1.0.2"] = {
-    --     type = 0,
-    --     url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
-    --     size = 0,
-    --     infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.2.txt",
-    --     fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.2/"
-    -- },
-    -- ["1.0.3"] = {
-    --     type = 0,
-    --     url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
-    --     size = 0,
-    --     infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.3.txt",
-    --     fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.3/"
-    -- },
-    -- ["1.0.4"] = {
-    --     type = 0,
-    --     url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
-    --     size = 0,
-    --     infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.4.txt",
-    --     fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.4"
+        infoFiles = "http://1.95.136.32/zhenlongjiangshi/files_1.0.0.txt",
+        fileUrlPre = "http://1.95.136.32/zhenlongjiangshi/hotupdatefiles/1.0.0/"
     }
 }
 local binaryVersion = {
     ["10001"] = {
         version = "1.0.0",
-        url = "http://192.168.1.88/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.apk"
+        url = "http://1.95.136.32/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.apk"
     },
     ["10002"] = {
         version = "1.0.0",
-        url = "http://192.168.1.88/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.ipa"
+        url = "http://1.95.136.32/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.ipa"
     }
 }
-DataServers = {{"192.168.1.88", 7901}}
+DataServers = {{"1.95.136.32", 7901}}
 return version, binaryVersion
+-- Local
+-- local version = {
+--     ["1.0.0"] = {
+--         type = 0,
+--         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+--         size = 0,
+--         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.0.txt",
+--         fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.0/"
+--     },
+--     ["1.0.1"] = {
+--         type = 0,
+--         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+--         size = 0,
+--         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.1.txt",
+--         fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.1/"
+--     },
+--     ["1.0.2"] = {
+--         type = 0,
+--         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+--         size = 0,
+--         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.2.txt",
+--         fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.2/"
+--     },
+--     ["1.0.3"] = {
+--         type = 0,
+--         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+--         size = 0,
+--         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.3.txt",
+--         fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.3/"
+--     },
+--     ["1.0.4"] = {
+--         type = 0,
+--         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+--         size = 0,
+--         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.4.txt",
+--         fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.4"
+--     }
+-- }
+-- local binaryVersion = {
+--     ["10001"] = {
+--         version = "1.0.0",
+--         url = "http://192.168.1.88/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.apk"
+--     },
+--     ["10002"] = {
+--         version = "1.0.0",
+--         url = "http://192.168.1.88/zhenlongjiangshi/ZhenLongJiangShi-1.0.1.ipa"
+--     }
+-- }
+-- DataServers = {{"192.168.1.88", 7901}}
+-- return version, binaryVersion
