@@ -43,20 +43,20 @@ local version = {
         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.2.txt",
         fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.2/"
     },
-    -- ["1.0.3"] = {
-    --     type = 0,
-    --     url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
-    --     size = 0,
-    --     infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.3.txt",
-    --     fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.3/"
-    -- },
-    -- ["1.0.4"] = {
-    --     type = 0,
-    --     url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
-    --     size = 0,
-    --     infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.4.txt",
-    --     fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.4"
-    -- },
+    ["1.0.3"] = {
+        type = 0,
+        url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+        size = 0,
+        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.3.txt",
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.3/"
+    },
+    ["1.0.4"] = {
+        type = 0,
+        url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+        size = 0,
+        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.4.txt",
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.4"
+    },
 }
 local binaryVersion = {
     ["10001"] = {
