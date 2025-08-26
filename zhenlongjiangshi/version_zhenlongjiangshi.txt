@@ -55,7 +55,14 @@ local version = {
         url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
         size = 0,
         infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.4.txt",
-        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.4"
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.4/"
+    },
+    ["1.0.5"] = {
+        type = 0,
+        url = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/",
+        size = 0,
+        infoFiles = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/files_1.0.5.txt",
+        fileUrlPre = "http://192.168.1.88/dahuaxiyou2/zhenlongjiangshi/hotupdatefiles/1.0.5/"
     },
 }
 local binaryVersion = {
